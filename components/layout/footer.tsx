@@ -21,7 +21,7 @@ export function Footer() {
       <div className="section-container flex flex-col items-center justify-between gap-6 md:flex-row">
         <div className="text-center md:text-left">
           <p className="text-sm text-muted-foreground">
-            © 2025 Yashika Shetty.
+            © 2026 Yashika Shetty.
           </p>
           <p className="mt-1 text-xs text-muted-foreground/80">
             Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.

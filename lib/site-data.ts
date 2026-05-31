@@ -14,12 +14,12 @@ export const siteConfig = {
 export const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/YashikaSShetty",
     label: "GitHub profile",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/yashika-shetty/",
     label: "LinkedIn profile",
   },
   {
