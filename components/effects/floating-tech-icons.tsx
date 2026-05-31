@@ -1,14 +1,8 @@
 "use client";
+/* eslint-disable @next/next/no-inline-styles */
 
 import { motion } from "framer-motion";
-import {
-  SiReact,
-  SiPython,
-  SiNodedotjs,
-  SiTypescript,
-  SiMongodb,
-  SiOpenai,
-} from "react-icons/si";
+import { SiMongodb, SiNodedotjs, SiOpenai, SiPython, SiReact, SiTypescript } from 'react-icons/si'
 
 const icons = [
   { Icon: SiReact, color: "#61DAFB", top: "15%", left: "8%", delay: 0 },

@@ -84,6 +84,64 @@
     box-shadow: 0 0 40px rgba(0, 229, 255, 0.25);
   }
 
+  .hexagon-border {
+    background: conic-gradient(from 0deg, #00e5ff, #7c3aed, #00e5ff, transparent, #00e5ff);
+    padding: 3px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .hexagon-overlay {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(124, 58, 237, 0.2));
+  }
+
+  .hexagon-mask {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .hexagon-dot {
+    position: absolute;
+  }
+
+  .hexagon-dot-left {
+    left: -4%;
+  }
+
+  .hexagon-dot-right {
+    left: 104%;
+  }
+
+  .cursor-glow-dot {
+    background: radial-gradient(circle, rgba(0,229,255,0.4) 0%, rgba(124,58,237,0.2) 40%, transparent 70%);
+  }
+
+  .dot-1 {
+    top: 20%;
+  }
+
+  .dot-2 {
+    top: 32%;
+  }
+
+  .dot-3 {
+    top: 44%;
+  }
+
+  .dot-4 {
+    top: 56%;
+  }
+
+  .dot-5 {
+    top: 68%;
+  }
+
+  .dot-6 {
+    top: 80%;
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-accent to-violet-accent bg-clip-text text-transparent;
   }

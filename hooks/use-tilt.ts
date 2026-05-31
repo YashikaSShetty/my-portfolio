@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 
 export function useTilt(maxTilt = 12) {
   const ref = useRef<HTMLDivElement>(null);

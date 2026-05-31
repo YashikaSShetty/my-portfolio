@@ -6,6 +6,7 @@ import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { siteConfig } from "@/lib/site-data";
 import type { Metadata } from "next";
+import * as React from 'react'
 import "./globals.css";
 
 export const metadata: Metadata = {

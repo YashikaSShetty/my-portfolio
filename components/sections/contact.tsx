@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import { SectionReveal } from "@/components/effects/section-reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/lib/site-data";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
-import { useState } from "react";
 
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "success">("idle");

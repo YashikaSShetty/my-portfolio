@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { motion, type Variants } from "framer-motion";
+import * as React from "react";
 
 const defaultVariants: Variants = {
   hidden: { opacity: 0, y: 40 },

@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-inline-styles */
 
 import { motion, useScroll, useSpring } from "framer-motion";
 

@@ -1,18 +1,18 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { Download, ArrowRight } from "lucide-react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+/* eslint-disable @next/next/no-inline-styles */
+import { Button } from '@/components/ui/button';
+import { useTypewriter } from '@/hooks/use-typewriter';
 import {
   heroRoles,
   siteConfig,
   socialLinks,
 } from "@/lib/site-data";
-import { Button } from "@/components/ui/button";
-import { useTypewriter } from "@/hooks/use-typewriter";
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowRight, Download } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const socialIconMap = {
   GitHub: FaGithub,
@@ -27,37 +27,11 @@ function HexagonPortrait() {
     <motion.div
       className="relative mx-auto flex h-[320px] w-[280px] items-center justify-center sm:h-[380px] sm:w-[320px]"
       animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
     >
-      <div
-        className="absolute inset-0 animate-spin-slow rounded-full opacity-60"
-        style={{
-          background:
-            "conic-gradient(from 0deg, #00E5FF, #7C3AED, #00E5FF, transparent, #00E5FF)",
-          padding: "3px",
-          WebkitMask:
-            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-          WebkitMaskComposite: "xor",
-          maskComposite: "exclude",
-        }}
-        aria-hidden
-      />
-      <div
-        className="relative flex h-[85%] w-[85%] items-center justify-center glow-cyan"
-        style={{
-          clipPath:
-            "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-          background:
-            "linear-gradient(135deg, rgba(0,229,255,0.2), rgba(124,58,237,0.2))",
-        }}
-      >
-        <div
-          className="relative h-full w-full overflow-hidden"
-          style={{
-            clipPath:
-              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-          }}
-        >
+      <div className="hexagon-border absolute inset-0 animate-spin-slow rounded-full opacity-60" aria-hidden />
+      <div className="hexagon-overlay relative flex h-[85%] w-[85%] items-center justify-center glow-cyan">
+        <div className="hexagon-mask relative h-full w-full overflow-hidden">
           {!imgError ? (
             <Image
               src="/images/profile.jpg"
@@ -70,12 +44,8 @@ function HexagonPortrait() {
             />
           ) : (
             <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-cyan-accent/20 to-violet-accent/30">
-              <span className="font-mono text-5xl font-bold text-gradient">
-                YS
-              </span>
-              <span className="mt-2 text-xs text-muted-foreground">
-                Add photo to /public/images/profile.jpg
-              </span>
+              <span className="font-mono text-5xl font-bold text-gradient">YS</span>
+              <span className="mt-2 text-xs text-muted-foreground">Add photo to /public/images/profile.jpg</span>
             </div>
           )}
         </div>
@@ -83,18 +53,14 @@ function HexagonPortrait() {
       {[...Array(6)].map((_, i) => (
         <motion.span
           key={i}
-          className="absolute h-1.5 w-1.5 rounded-full bg-cyan-accent"
-          style={{
-            top: `${20 + i * 12}%`,
-            left: i % 2 === 0 ? "-4%" : "104%",
-          }}
+          className={`hexagon-dot absolute h-1.5 w-1.5 rounded-full bg-cyan-accent ${i % 2 === 0 ? 'hexagon-dot-left' : 'hexagon-dot-right'} dot-${i + 1}`}
           animate={{ opacity: [0.3, 1, 0.3], scale: [1, 1.5, 1] }}
           transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
           aria-hidden
         />
       ))}
     </motion.div>
-  );
+  )
 }
 
 export function Hero() {
