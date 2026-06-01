@@ -4,7 +4,7 @@ import { SectionReveal } from "@/components/effects/section-reveal";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/lib/site-data";
 import { motion } from "framer-motion";
-import { ExternalLink, GitHub, Sparkles } from "lucide-react";
+import { ExternalLink, Github,Sparkles } from 'lucide-react'
 
 export function Projects() {
   return (
@@ -61,7 +61,7 @@ export function Projects() {
                 <Button asChild variant="outline" size="sm">
                   <a href={project.githubUrl} target="_blank" rel="noreferrer">
                     GitHub
-                    <GitHub className="h-4 w-4" />
+                    <Github className="h-4 w-4" />
                   </a>
                 </Button>
               </div>

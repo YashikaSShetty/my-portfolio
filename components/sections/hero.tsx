@@ -7,12 +7,11 @@ import {
   siteConfig,
   socialLinks,
 } from "@/lib/site-data";
-import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, Download } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, Download } from 'lucide-react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const socialIconMap = {
   GitHub: FaGithub,
@@ -33,13 +32,10 @@ function HexagonPortrait() {
       <div className="hexagon-overlay relative flex h-[85%] w-[85%] items-center justify-center glow-cyan">
         <div className="hexagon-mask relative h-full w-full overflow-hidden">
           {!imgError ? (
-            <Image
+            <img
               src="/images/profile.jpg"
               alt="Yashika Shetty - Software Engineer"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 280px, 320px"
+              className="absolute inset-0 h-full w-full object-cover"
               onError={() => setImgError(true)}
             />
           ) : (
